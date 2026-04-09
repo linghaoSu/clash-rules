@@ -102,6 +102,10 @@ jobs:
           echo "payload:" > lancidr.txt
           curl -sSL ${lan_cidr} | perl -ne '/(.+\/\d+)/ && print "  - |$1|\n"' | sed "s/|/'/g" >> lancidr.txt
 
+      - name: Fetch applications.txt from upstream
+        run: |
+          curl -sSL https://raw.githubusercontent.com/Loyalsoldier/clash-rules/hidden/applications.txt -o applications.txt
+
       - name: Move files to publish directory
         run: |
           mkdir -p publish
