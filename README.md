@@ -1,10 +1,10 @@
-# 简介 ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/Loyalsoldier/clash-rules/total?logo=github) ![GitHub Downloads (all assets, latest release)](https://img.shields.io/github/downloads/Loyalsoldier/clash-rules/latest/total?logo=github) [![jsdelivr stats](https://data.jsdelivr.com/v1/package/gh/Loyalsoldier/clash-rules/badge?style=rounded)](https://www.jsdelivr.com/package/gh/Loyalsoldier/clash-rules)
+# 简介 ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/linghaoSu/clash-rules/total?logo=github) ![GitHub Downloads (all assets, latest release)](https://img.shields.io/github/downloads/linghaoSu/clash-rules/latest/total?logo=github)
 
 本项目生成适用于 [**Clash Premium 内核**](https://github.com/Dreamacro/clash/releases/tag/premium)的规则集（RULE-SET），同时适用于所有使用 Clash Premium 内核的 Clash 图形用户界面（GUI）客户端，包括但不限于 [ClashX Pro](https://github.com/Loyalsoldier/clash-rules/tree/hidden/software/clashx-pro)、[clash-party](https://github.com/mihomo-party-org/clash-party)、[clash-verge-rev](https://github.com/clash-verge-rev/clash-verge-rev)、[Clash for Windows](https://github.com/Loyalsoldier/clash-rules/tree/hidden/software/clash-for-windows)、[clashmi](https://github.com/KaringX/clashmi)、[Clash Meta for Android](https://github.com/MetaCubeX/ClashMetaForAndroid)、[OpenClash](https://github.com/vernesong/OpenClash)。使用 GitHub Actions 北京时间每天早上 6:30 自动构建，保证规则最新。
 
 ## 说明
 
-本项目规则集（RULE-SET）的数据主要来源于项目 [@Loyalsoldier/v2ray-rules-dat](https://github.com/Loyalsoldier/v2ray-rules-dat) 和 [@v2fly/domain-list-community](https://github.com/v2fly/domain-list-community)；[`Apple`](https://github.com/Loyalsoldier/clash-rules/blob/release/apple.txt) 和 [`Google`](https://github.com/Loyalsoldier/clash-rules/blob/release/google.txt) 列表里的域名来源于项目 [@felixonmars/dnsmasq-china-list](https://github.com/felixonmars/dnsmasq-china-list)；中国大陆 IPv4 地址数据使用 [@17mon/china_ip_list](https://github.com/17mon/china_ip_list)。
+本项目规则集（RULE-SET）的数据主要来源于项目 [@Loyalsoldier/v2ray-rules-dat](https://github.com/Loyalsoldier/v2ray-rules-dat) 和 [@v2fly/domain-list-community](https://github.com/v2fly/domain-list-community)；[`Apple`](https://github.com/linghaoSu/clash-rules/blob/release/apple.txt) 和 [`Google`](https://github.com/linghaoSu/clash-rules/blob/release/google.txt) 列表里的域名来源于项目 [@felixonmars/dnsmasq-china-list](https://github.com/felixonmars/dnsmasq-china-list)；中国大陆 IPv4 地址数据使用 [@17mon/china_ip_list](https://github.com/17mon/china_ip_list)；`AI` 列表在本仓库手工维护，覆盖主流 AI 服务域名。
 
 本项目的规则集（RULE-SET）只适用于 Clash **Premium** 版本。Clash Premium 相对于普通版，增加了 **TUN 增强模式**，能接管设备所有 TCP 和 UDP 流量。
 
@@ -28,47 +28,36 @@
 
 ### 在线地址（URL）
 
-> 如果无法访问域名 `raw.githubusercontent.com`，可以使用第二个地址（`cdn.jsdelivr.net`），但是内容更新会有 12 小时的延迟。以下地址填写在 Clash 配置文件里的 `rule-providers` 里的 `url` 配置项中。
+> 以下地址填写在 Clash 配置文件里的 `rule-providers` 里的 `url` 配置项中。
 
 - **直连域名列表 direct.txt**：
-  - [https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt](https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt)
-  - [https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt](https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt)
+  - [https://raw.githubusercontent.com/linghaoSu/clash-rules/release/direct.txt](https://raw.githubusercontent.com/linghaoSu/clash-rules/release/direct.txt)
 - **代理域名列表 proxy.txt**：
-  - [https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt](https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt)
-  - [https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt](https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt)
+  - [https://raw.githubusercontent.com/linghaoSu/clash-rules/release/proxy.txt](https://raw.githubusercontent.com/linghaoSu/clash-rules/release/proxy.txt)
 - **广告域名列表 reject.txt**：
-  - [https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/reject.txt](https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/reject.txt)
-  - [https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt](https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt)
+  - [https://raw.githubusercontent.com/linghaoSu/clash-rules/release/reject.txt](https://raw.githubusercontent.com/linghaoSu/clash-rules/release/reject.txt)
 - **私有网络专用域名列表 private.txt**：
-  - [https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/private.txt](https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/private.txt)
-  - [https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt](https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt)
+  - [https://raw.githubusercontent.com/linghaoSu/clash-rules/release/private.txt](https://raw.githubusercontent.com/linghaoSu/clash-rules/release/private.txt)
 - **Apple 在中国大陆可直连的域名列表 apple.txt**：
-  - [https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/apple.txt](https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/apple.txt)
-  - [https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt](https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt)
+  - [https://raw.githubusercontent.com/linghaoSu/clash-rules/release/apple.txt](https://raw.githubusercontent.com/linghaoSu/clash-rules/release/apple.txt)
 - **iCloud 域名列表 icloud.txt**：
-  - [https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/icloud.txt](https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/icloud.txt)
-  - [https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/icloud.txt](https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/icloud.txt)
+  - [https://raw.githubusercontent.com/linghaoSu/clash-rules/release/icloud.txt](https://raw.githubusercontent.com/linghaoSu/clash-rules/release/icloud.txt)
 - **[慎用]Google 在中国大陆可直连的域名列表 google.txt**：
-  - [https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/google.txt](https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/google.txt)
-  - [https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt](https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt)
+  - [https://raw.githubusercontent.com/linghaoSu/clash-rules/release/google.txt](https://raw.githubusercontent.com/linghaoSu/clash-rules/release/google.txt)
+- **AI 服务域名列表 ai.txt**（本仓库手工维护，覆盖 OpenAI、Anthropic、Gemini、Grok、Copilot 等主流 AI 服务）：
+  - [https://raw.githubusercontent.com/linghaoSu/clash-rules/release/ai.txt](https://raw.githubusercontent.com/linghaoSu/clash-rules/release/ai.txt)
 - **GFWList 域名列表 gfw.txt**：
-  - [https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/gfw.txt](https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/gfw.txt)
-  - [https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt](https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt)
+  - [https://raw.githubusercontent.com/linghaoSu/clash-rules/release/gfw.txt](https://raw.githubusercontent.com/linghaoSu/clash-rules/release/gfw.txt)
 - **非中国大陆使用的顶级域名列表 tld-not-cn.txt**：
-  - [https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/tld-not-cn.txt](https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/tld-not-cn.txt)
-  - [https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/tld-not-cn.txt](https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/tld-not-cn.txt)
+  - [https://raw.githubusercontent.com/linghaoSu/clash-rules/release/tld-not-cn.txt](https://raw.githubusercontent.com/linghaoSu/clash-rules/release/tld-not-cn.txt)
 - **Telegram 使用的 IP 地址列表 telegramcidr.txt**：
-  - [https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/telegramcidr.txt](https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/telegramcidr.txt)
-  - [https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt](https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt)
+  - [https://raw.githubusercontent.com/linghaoSu/clash-rules/release/telegramcidr.txt](https://raw.githubusercontent.com/linghaoSu/clash-rules/release/telegramcidr.txt)
 - **局域网 IP 及保留 IP 地址列表 lancidr.txt**：
-  - [https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/lancidr.txt](https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/lancidr.txt)
-  - [https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt](https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt)
+  - [https://raw.githubusercontent.com/linghaoSu/clash-rules/release/lancidr.txt](https://raw.githubusercontent.com/linghaoSu/clash-rules/release/lancidr.txt)
 - **中国大陆 IP 地址列表 cncidr.txt**：
-  - [https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt](https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt)
-  - [https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt](https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt)
+  - [https://raw.githubusercontent.com/linghaoSu/clash-rules/release/cncidr.txt](https://raw.githubusercontent.com/linghaoSu/clash-rules/release/cncidr.txt)
 - **需要直连的常见软件列表 applications.txt**：
-  - [https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/applications.txt](https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/applications.txt)
-  - [https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt](https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt)
+  - [https://raw.githubusercontent.com/linghaoSu/clash-rules/release/applications.txt](https://raw.githubusercontent.com/linghaoSu/clash-rules/release/applications.txt)
 
 ### 使用方式
 
@@ -81,91 +70,98 @@ rule-providers:
   reject:
     type: http
     behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
+    url: "https://raw.githubusercontent.com/linghaoSu/clash-rules/release/reject.txt"
     path: ./ruleset/reject.yaml
     interval: 86400
 
   icloud:
     type: http
     behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/icloud.txt"
+    url: "https://raw.githubusercontent.com/linghaoSu/clash-rules/release/icloud.txt"
     path: ./ruleset/icloud.yaml
     interval: 86400
 
   apple:
     type: http
     behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt"
+    url: "https://raw.githubusercontent.com/linghaoSu/clash-rules/release/apple.txt"
     path: ./ruleset/apple.yaml
     interval: 86400
 
   google:
     type: http
     behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt"
+    url: "https://raw.githubusercontent.com/linghaoSu/clash-rules/release/google.txt"
     path: ./ruleset/google.yaml
+    interval: 86400
+
+  ai:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/linghaoSu/clash-rules/release/ai.txt"
+    path: ./ruleset/ai.yaml
     interval: 86400
 
   proxy:
     type: http
     behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt"
+    url: "https://raw.githubusercontent.com/linghaoSu/clash-rules/release/proxy.txt"
     path: ./ruleset/proxy.yaml
     interval: 86400
 
   direct:
     type: http
     behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt"
+    url: "https://raw.githubusercontent.com/linghaoSu/clash-rules/release/direct.txt"
     path: ./ruleset/direct.yaml
     interval: 86400
 
   private:
     type: http
     behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt"
+    url: "https://raw.githubusercontent.com/linghaoSu/clash-rules/release/private.txt"
     path: ./ruleset/private.yaml
     interval: 86400
 
   gfw:
     type: http
     behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt"
+    url: "https://raw.githubusercontent.com/linghaoSu/clash-rules/release/gfw.txt"
     path: ./ruleset/gfw.yaml
     interval: 86400
 
   tld-not-cn:
     type: http
     behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/tld-not-cn.txt"
+    url: "https://raw.githubusercontent.com/linghaoSu/clash-rules/release/tld-not-cn.txt"
     path: ./ruleset/tld-not-cn.yaml
     interval: 86400
 
   telegramcidr:
     type: http
     behavior: ipcidr
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt"
+    url: "https://raw.githubusercontent.com/linghaoSu/clash-rules/release/telegramcidr.txt"
     path: ./ruleset/telegramcidr.yaml
     interval: 86400
 
   cncidr:
     type: http
     behavior: ipcidr
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt"
+    url: "https://raw.githubusercontent.com/linghaoSu/clash-rules/release/cncidr.txt"
     path: ./ruleset/cncidr.yaml
     interval: 86400
 
   lancidr:
     type: http
     behavior: ipcidr
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt"
+    url: "https://raw.githubusercontent.com/linghaoSu/clash-rules/release/lancidr.txt"
     path: ./ruleset/lancidr.yaml
     interval: 86400
 
   applications:
     type: http
     behavior: classical
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt"
+    url: "https://raw.githubusercontent.com/linghaoSu/clash-rules/release/applications.txt"
     path: ./ruleset/applications.yaml
     interval: 86400
 ```
@@ -187,6 +183,7 @@ rules:
   - RULE-SET,icloud,DIRECT
   - RULE-SET,apple,DIRECT
   - RULE-SET,google,PROXY
+  - RULE-SET,ai,PROXY
   - RULE-SET,proxy,PROXY
   - RULE-SET,direct,DIRECT
   - RULE-SET,lancidr,DIRECT
@@ -209,21 +206,9 @@ rules:
   - DOMAIN,yacd.haishan.me,DIRECT
   - RULE-SET,private,DIRECT
   - RULE-SET,reject,REJECT
+  - RULE-SET,ai,PROXY
   - RULE-SET,tld-not-cn,PROXY
   - RULE-SET,gfw,PROXY
   - RULE-SET,telegramcidr,PROXY
   - MATCH,DIRECT
 ```
-
-## 致谢
-
-- [@Loyalsoldier/geoip](https://github.com/Loyalsoldier/geoip)
-- [@Loyalsoldier/v2ray-rules-dat](https://github.com/Loyalsoldier/v2ray-rules-dat)
-- [@gfwlist/gfwlist](https://github.com/gfwlist/gfwlist)
-- [@v2fly/domain-list-community](https://github.com/v2fly/domain-list-community)
-- [@felixonmars/dnsmasq-china-list](https://github.com/felixonmars/dnsmasq-china-list)
-- [@17mon/china_ip_list](https://github.com/17mon/china_ip_list)
-
-## 项目 Star 数增长趋势
-
-[![Stargazers over time](https://starchart.cc/Loyalsoldier/clash-rules.svg)](https://starchart.cc/Loyalsoldier/clash-rules)
