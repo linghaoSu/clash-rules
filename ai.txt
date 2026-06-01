@@ -1,0 +1,96 @@
+payload:
+  # OpenAI / ChatGPT / Sora
+  - '+.openai.com'
+  - '+.chatgpt.com'
+  - '+.chatgpt.livekit.cloud'
+  - '+.sora.com'
+  - 'openaiapi-site.azureedge.net'
+  - 'openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net'
+  - 'openaicom.imgix.net'
+  - 'openaicomproductionae4b.blob.core.windows.net'
+  - 'production-openaicom-storage.azureedge.net'
+
+  # Anthropic / Claude
+  - '+.anthropic.com'
+  - '+.claude.ai'
+  - '+.claude.com'
+  - '+.claudemcpclient.com'
+  - '+.claudeusercontent.com'
+  - 'servd-anthropic-website.b-cdn.net'
+
+  # Google AI / Gemini
+  - '+.ai.dev'
+  - '+.ai.studio'
+  - '+.google.ai'
+
+  # xAI / Grok
+  - '+.x.ai'
+  - '+.grok.com'
+  - '+.grokipedia.com'
+
+  # Meta AI
+  - '+.meta.ai'
+
+  # GitHub Copilot
+  - '+.githubcopilot.com'
+  - '+.github.ai'
+
+  # Perplexity
+  - '+.perplexity.ai'
+  - '+.perplexity.com'
+  - '+.pplx.ai'
+
+  # Mistral / Cohere / Groq / Cerebras / HuggingFace
+  - '+.mistral.ai'
+  - '+.cohere.ai'
+  - '+.cohere.com'
+  - '+.groq.com'
+  - '+.cerebras.ai'
+  - '+.huggingface.co'
+
+  # Poe / Character.ai / OpenRouter
+  - '+.poe.com'
+  - '+.character.ai'
+  - '+.openrouter.ai'
+
+  # Code assistants
+  - '+.cursorapi.com'
+  - '+.coderabbit.ai'
+  - '+.devin.ai'
+  - '+.devv.ai'
+  - '+.trae.ai'
+  - '+.jetbrains.ai'
+  - '+.grazie.ai'
+  - '+.ai-sdk.dev'
+
+  # AI chat / agent platforms
+  - '+.dify.ai'
+  - '+.jan.ai'
+  - '+.duck.ai'
+  - '+.forefront.ai'
+  - '+.lmarena.ai'
+  - '+.arena.ai'
+  - '+.clova.ai'
+  - '+.h2o.ai'
+  - '+.chutes.ai'
+  - '+.clawhub.ai'
+  - '+.openclaw.ai'
+
+  # AI image / video / audio generation
+  - '+.openart.ai'
+  - '+.lovart.ai'
+  - '+.suno.ai'
+  - '+.wombo.ai'
+  - '+.shedevrum.ai'
+  - '+.meteum.ai'
+  - '+.videoindexer.ai'
+
+  # AI writing / content
+  - '+.jasper.ai'
+  - '+.writesonic.com'
+  - '+.podwise.ai'
+  - '+.youmind.ai'
+
+  # AI infra / misc
+  - '+.mlc.ai'
+  - '+.openvino.ai'
