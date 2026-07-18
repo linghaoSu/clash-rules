@@ -4,7 +4,7 @@
 
 ## 说明
 
-本项目规则集（RULE-SET）的数据主要来源于项目 [@Loyalsoldier/v2ray-rules-dat](https://github.com/Loyalsoldier/v2ray-rules-dat) 和 [@v2fly/domain-list-community](https://github.com/v2fly/domain-list-community)；[`Apple`](https://github.com/linghaoSu/clash-rules/blob/release/apple.txt) 和 [`Google`](https://github.com/linghaoSu/clash-rules/blob/release/google.txt) 列表里的域名来源于项目 [@felixonmars/dnsmasq-china-list](https://github.com/felixonmars/dnsmasq-china-list)；中国大陆 IPv4 地址数据使用 [@17mon/china_ip_list](https://github.com/17mon/china_ip_list)；`AI` 列表在本仓库手工维护，覆盖主流 AI 服务域名。
+本项目规则集（RULE-SET）的数据主要来源于项目 [@Loyalsoldier/v2ray-rules-dat](https://github.com/Loyalsoldier/v2ray-rules-dat) 和 [@v2fly/domain-list-community](https://github.com/v2fly/domain-list-community)；[`Apple`](https://github.com/linghaoSu/clash-rules/blob/release/apple.txt) 和 [`Google`](https://github.com/linghaoSu/clash-rules/blob/release/google.txt) 列表里的域名来源于项目 [@felixonmars/dnsmasq-china-list](https://github.com/felixonmars/dnsmasq-china-list)；中国大陆 IPv4 地址数据使用 [@17mon/china_ip_list](https://github.com/17mon/china_ip_list)；`AI` 列表每天自动合并 [@VPSDance/ai-proxy-rules](https://github.com/VPSDance/ai-proxy-rules) 中兼容 `domain` behavior 的规则，并保留本仓库的补充域名；`Claude` 专用列表完整同步其 Anthropic classical 规则。
 
 本项目的规则集（RULE-SET）只适用于 Clash **Premium** 版本。Clash Premium 相对于普通版，增加了 **TUN 增强模式**，能接管设备所有 TCP 和 UDP 流量。
 
@@ -44,8 +44,13 @@
   - [https://raw.githubusercontent.com/linghaoSu/clash-rules/release/icloud.txt](https://raw.githubusercontent.com/linghaoSu/clash-rules/release/icloud.txt)
 - **[慎用]Google 在中国大陆可直连的域名列表 google.txt**：
   - [https://raw.githubusercontent.com/linghaoSu/clash-rules/release/google.txt](https://raw.githubusercontent.com/linghaoSu/clash-rules/release/google.txt)
-- **AI 服务域名列表 ai.txt**（本仓库手工维护，覆盖 OpenAI、Anthropic、Gemini、Grok、Copilot 等主流 AI 服务）：
+- **AI 服务域名列表 ai.txt**（自动合并 `VPSDance/ai-proxy-rules` 的 `DOMAIN`、`DOMAIN-SUFFIX` 规则与本仓库补充域名）：
   - [https://raw.githubusercontent.com/linghaoSu/clash-rules/release/ai.txt](https://raw.githubusercontent.com/linghaoSu/clash-rules/release/ai.txt)
+- **Claude / Anthropic 专用列表 claude.txt**（包含域名、IP-CIDR、IP-ASN 和关键词规则）：
+  - [https://raw.githubusercontent.com/linghaoSu/clash-rules/release/claude.txt](https://raw.githubusercontent.com/linghaoSu/clash-rules/release/claude.txt)
+
+> `ai.txt` 继续使用 `behavior: domain`；上游的 `DOMAIN-KEYWORD`、`DOMAIN-REGEX`、IP-CIDR 和 IP-ASN 等 classical 规则不会混入该文件。
+
 - **GFWList 域名列表 gfw.txt**：
   - [https://raw.githubusercontent.com/linghaoSu/clash-rules/release/gfw.txt](https://raw.githubusercontent.com/linghaoSu/clash-rules/release/gfw.txt)
 - **非中国大陆使用的顶级域名列表 tld-not-cn.txt**：
@@ -100,6 +105,13 @@ rule-providers:
     behavior: domain
     url: "https://raw.githubusercontent.com/linghaoSu/clash-rules/release/ai.txt"
     path: ./ruleset/ai.yaml
+    interval: 86400
+
+  claude:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/linghaoSu/clash-rules/release/claude.txt"
+    path: ./ruleset/claude.yaml
     interval: 86400
 
   proxy:
@@ -179,6 +191,7 @@ rules:
   - DOMAIN,clash.razord.top,DIRECT
   - DOMAIN,yacd.haishan.me,DIRECT
   - RULE-SET,private,DIRECT
+  - RULE-SET,claude,PROXY
   - RULE-SET,reject,REJECT
   - RULE-SET,icloud,DIRECT
   - RULE-SET,apple,DIRECT
@@ -205,6 +218,7 @@ rules:
   - DOMAIN,clash.razord.top,DIRECT
   - DOMAIN,yacd.haishan.me,DIRECT
   - RULE-SET,private,DIRECT
+  - RULE-SET,claude,PROXY
   - RULE-SET,reject,REJECT
   - RULE-SET,ai,PROXY
   - RULE-SET,tld-not-cn,PROXY

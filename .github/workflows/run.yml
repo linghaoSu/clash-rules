@@ -29,6 +29,10 @@ jobs:
           echo "cn_cidr=https://raw.githubusercontent.com/Loyalsoldier/geoip/release/text/cn.txt" >> $GITHUB_ENV
           echo "lan_cidr=https://raw.githubusercontent.com/Loyalsoldier/geoip/release/text/private.txt" >> $GITHUB_ENV
           echo "telegram_cidr=https://raw.githubusercontent.com/Loyalsoldier/geoip/release/text/telegram.txt" >> $GITHUB_ENV
+          echo "VPSDance_ai=https://raw.githubusercontent.com/VPSDance/ai-proxy-rules/main/rules/clash/all.yaml" >> $GITHUB_ENV
+          echo "VPSDance_ai_fallback=https://cdn.jsdelivr.net/gh/VPSDance/ai-proxy-rules@main/rules/clash/all.yaml" >> $GITHUB_ENV
+          echo "VPSDance_claude=https://raw.githubusercontent.com/VPSDance/ai-proxy-rules/main/rules/clash/anthropic.yaml" >> $GITHUB_ENV
+          echo "VPSDance_claude_fallback=https://cdn.jsdelivr.net/gh/VPSDance/ai-proxy-rules@main/rules/clash/anthropic.yaml" >> $GITHUB_ENV
         shell: bash
 
       - name: Checkout
@@ -101,6 +105,14 @@ jobs:
         run: |
           echo "payload:" > lancidr.txt
           curl -sSL ${lan_cidr} | perl -ne '/(.+\/\d+)/ && print "  - |$1|\n"' | sed "s/|/'/g" >> lancidr.txt
+
+      - name: Generate ai.txt file
+        run: |
+          bash ./scripts/generate-ai-rules.sh "${VPSDance_ai}" ai.txt ai.txt "${VPSDance_ai_fallback}"
+
+      - name: Generate claude.txt file
+        run: |
+          bash ./scripts/generate-claude-rules.sh "${VPSDance_claude}" claude.txt "${VPSDance_claude_fallback}"
 
       - name: Fetch applications.txt from upstream
         run: |

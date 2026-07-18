@@ -1,4 +1,7 @@
 payload:
+  # Local additions are merged with VPSDance/ai-proxy-rules during each build.
+  # Keep this file limited to exact domains and +.domain suffixes.
+
   # OpenAI / ChatGPT / Sora
   - '+.openai.com'
   - '+.chatgpt.com'
